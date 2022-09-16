@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
     
-    <Router>
+    <Router basename="/contact_tracing">
 
     <ScrollToTop/>
     <Routes>
