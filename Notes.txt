@@ -1,0 +1,43 @@
+
+import {useState} from 'react';
+import './index.css'
+
+function App() {
+  const [greetings, setGreetings] = useState(" ");
+  const [show, setShow] = useState(true);
+  const [close, setClose] = useState(false);
+  return (
+    <div className="App">
+    
+    <h1>{greetings}</h1>
+    {close && (<button onClick = {() => setClose(false) || setShow(true) || setGreetings(null)}>Close Me.</button>)}
+
+     
+     {
+     show &&
+     (
+     <button onClick = {() => setGreetings("Welcome To The Contact Tracing App") || setShow(false) || setClose(true)
+     }>Get Started</button>
+     )
+     }
+    </div>
+  );
+}
+
+export default App;
+
+
+    <NavItemsBtn>
+      {button ? (
+        <NavBtnLink to="/sign-up">
+         <Button primary>SIGN UP</Button>
+        </NavBtnLink>
+        ) : (
+        <NavBtnLink to="/sign-up">
+         <Button onClick={closeMobileMenu} bigFont primary>
+         SIGN UP
+         </Button>
+        </NavBtnLink>
+        )
+      }
+     </NavItemsBtn>
